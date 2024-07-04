@@ -1,10 +1,10 @@
 import random
-numero_aleatorio = random.randint(1, 5)  
+numero_aleatorio = random.randint(1, 100)  
 tentativa = 0
 
 while True:
 
-    palpite = int(input('Escreve um numero aleatorio de 1 a 2'))
+    palpite = int(input('Escreve um numero aleatorio de 1 a 100'))
     tentativa += 1
 
     if tentativa == numero_aleatorio:
