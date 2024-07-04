@@ -5,4 +5,4 @@ senha = 7
 while(tent != senha):
     if(tent != senha):
         tent = int(input("tente novamente: "))
-print("fim do programa")
+print ("fim do programa")
