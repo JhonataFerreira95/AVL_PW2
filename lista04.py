@@ -157,10 +157,9 @@ for i in range(1, quantidade):
     if valores[i] > maior_valor:
         maior_valor = valores[i]
 
-# Calcula a média aritmética
+
 media = soma / quantidade
 
-# Exibe os resultados
 print(f"Menor valor: {menor_valor}")
 print(f"Maior valor: {maior_valor}")
 print(f"Média aritmética: {media:.0f}")
