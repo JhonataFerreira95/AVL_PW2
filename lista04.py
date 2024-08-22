@@ -72,3 +72,40 @@ elif soma_impar1 > soma_impar2:
     print("listaImpar1 > listaImpar2")
 else:
     print("listaImpar1 = listaImpar2")
+
+# 3. leia 10 valores inteiros e armazene em uma lista. O programa deve imprimir no terminal
+# quantos valores pares foram digitados pelo usuário. Dica: use o operador “%” para
+# verificar se o número é par (ZERO é neutro, ZERO NÃO É PAR).
+
+# Questão 04
+# tamanho_da_lista = int(input('Digite o valor das listas: '))
+# primeira_lista = []
+# primeiro_valor_boolean = False
+# primeiro_valor_numerico = 0
+# elemento_desejado_cert = ['boolean', 'string', 'numero']
+
+for i in range(tamanho_da_lista):
+    if i == 0:
+        primeiro_valor = input('Digite o primeiro valor string: ')
+        primeira_lista += [primeiro_valor]
+    elif i == 1:
+        primeiro_valor_boolean = bool(input('Digite o primeiro valor boolean: '))
+        primeira_lista += [primeiro_valor_boolean]
+    elif i == 2:
+        primeiro_valor_numerico = int(input('Digite o primeiro valor numerico: '))
+        primeira_lista += [primeiro_valor_numerico]
+    else:
+        outro_valor_numerico = 0
+        elemento_desejado = input('Digite o tipo de elemento desejado: ')
+        while elemento_desejado not in elemento_desejado_cert:
+            print('Elemento inválido.')
+            elemento_desejado = input('Digite outro tipo de elemento desejado: ')
+        if elemento_desejado == elemento_desejado_cert[0]:
+            outro_valor_boolean = bool(input('Digite outro valor boolean: '))
+            primeira_lista += [outro_valor_boolean]
+        elif elemento_desejado == elemento_desejado_cert[1]:
+            outro_valor_string = input('Digite outro valor string: ')
+            primeira_lista += [outro_valor_string]
+        else:
+            outro_valor_numerico = int(input('Digite outro valor numerico: '))
+            primeira_lista += [outro_valor_numerico]
