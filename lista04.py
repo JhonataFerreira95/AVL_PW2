@@ -263,3 +263,28 @@ if resultado:
     print(resultado + ";")
 else:
     print("Nenhuma palavra foi inserida.")
+
+# 10. Escreva um programa que leia 9 valores inteiros e armazene em uma matriz 3x3. O
+
+# programa deve informar quantos valores ímpares foram digitados pelo usuário e impri-
+# mir a matriz no formato 3x3. Dica: use o operador “%” para verificar se o número é
+# ímpar.
+
+matriz = []
+
+quantidade_impares = 0
+
+print("Digite 9 valores inteiros:")
+for i in range(3):
+    linha = []
+    for j in range(3):
+        valor = int(input(f"Digite o valor para a posição [{i+1}][{j+1}]: "))
+        linha.append(valor)
+        if valor % 2 != 0:
+            quantidade_impares += 1
+    matriz.append(linha)
+print("Matriz:")
+for linha in matriz:
+    print(" ".join(map(str, linha)))
+
+print(f"Quantidade de números ímpares: {quantidade_impares}")
