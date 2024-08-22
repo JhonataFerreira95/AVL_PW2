@@ -77,6 +77,21 @@ else:
 # quantos valores pares foram digitados pelo usuário. Dica: use o operador “%” para
 # verificar se o número é par (ZERO é neutro, ZERO NÃO É PAR).
 
+valores = []
+
+print("Digite 10 valores inteiros:")
+for i in range(10):
+    valor = int(input())
+    valores.append(valor)
+
+contador_pares = 0
+
+for valor in valores:
+    if valor % 2 == 0 and valor != 0:
+        contador_pares += 1
+
+print(f"Quantidade de valores par: {contador_pares}")
+
 # Questão 04
 # tamanho_da_lista = int(input('Digite o valor das listas: '))
 # primeira_lista = []
@@ -84,28 +99,34 @@ else:
 # primeiro_valor_numerico = 0
 # elemento_desejado_cert = ['boolean', 'string', 'numero']
 
+tamanho_da_lista = int(input('Digite o valor das listas: '))
+primeira_lista = []
+elemento_desejado_cert = ['boolean', 'string', 'numero']
+
 for i in range(tamanho_da_lista):
     if i == 0:
         primeiro_valor = input('Digite o primeiro valor string: ')
-        primeira_lista += [primeiro_valor]
+        primeira_lista.append(primeiro_valor)
     elif i == 1:
-        primeiro_valor_boolean = bool(input('Digite o primeiro valor boolean: '))
-        primeira_lista += [primeiro_valor_boolean]
+        primeiro_valor_boolean = input('Digite o primeiro valor boolean (True/False): ')
+        primeira_lista.append(primeiro_valor_boolean.lower() == 'true')
     elif i == 2:
         primeiro_valor_numerico = int(input('Digite o primeiro valor numerico: '))
-        primeira_lista += [primeiro_valor_numerico]
+        primeira_lista.append(primeiro_valor_numerico)
     else:
-        outro_valor_numerico = 0
-        elemento_desejado = input('Digite o tipo de elemento desejado: ')
+        elemento_desejado = input('Digite o tipo de elemento desejado (boolean/string/numero): ')
         while elemento_desejado not in elemento_desejado_cert:
             print('Elemento inválido.')
             elemento_desejado = input('Digite outro tipo de elemento desejado: ')
-        if elemento_desejado == elemento_desejado_cert[0]:
-            outro_valor_boolean = bool(input('Digite outro valor boolean: '))
-            primeira_lista += [outro_valor_boolean]
-        elif elemento_desejado == elemento_desejado_cert[1]:
+        
+        if elemento_desejado == 'boolean':
+            outro_valor_boolean = input('Digite outro valor boolean (True/False): ')
+            primeira_lista.append(outro_valor_boolean.lower() == 'true')
+        elif elemento_desejado == 'string':
             outro_valor_string = input('Digite outro valor string: ')
-            primeira_lista += [outro_valor_string]
+            primeira_lista.append(outro_valor_string)
         else:
             outro_valor_numerico = int(input('Digite outro valor numerico: '))
-            primeira_lista += [outro_valor_numerico]
+            primeira_lista.append(outro_valor_numerico)
+
+print("Lista final:", primeira_lista)
