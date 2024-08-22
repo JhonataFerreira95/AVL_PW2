@@ -215,3 +215,24 @@ media = soma / quantidade
 print(f"Menor valor: {menor_valor}")
 print(f"Maior valor: {maior_valor}")
 print(f"Média aritmética: {media:.2f}") 
+
+# 8. Escreva um programa que receba como entrada uma string constituída por uma se-
+# quência de números inteiros separados por espaço. O programa deverá transformar
+
+# essa string em uma lista de números inteiros e apresentar o resultado da soma dos
+# valores das posições ímpares dessa lista. 
+
+entrada = input("Digite uma sequência de números inteiros (separados por espaço): ")
+
+numeros = list(map(int, entrada.split()))
+
+soma = 0
+valores_impares = []
+
+for i in range(len(numeros)):
+    if i % 2 == 1:
+        soma += numeros[i]
+        valores_impares.append(str(numeros[i])) 
+
+resultado = "+".join(valores_impares)
+print(f"{resultado} = {soma}")
