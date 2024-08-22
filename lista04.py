@@ -130,3 +130,37 @@ for i in range(tamanho_da_lista):
             primeira_lista.append(outro_valor_numerico)
 
 print("Lista final:", primeira_lista)
+
+# 5. Escreva um programa que receba como entrada uma sequência de valores inteiros.
+# Para tanto, o programa deverá inicialmente solicitar ao usuário quantos valores serão
+# fornecidos para análise e só depois solicitar os valores a serem analisados. A análise
+# consistirá em identificar e apresentar a partir da sequência de valores fornecidos, o
+# menor valor, o maior valor e a média aritmética dos valores.
+
+quantidade = int(input("Digite a quantidade de valores: "))
+
+valores = []
+soma = 0
+
+print("Digite os valores:")
+for i in range(quantidade):
+    valor = int(input())
+    valores.append(valor)
+    soma += valor 
+
+menor_valor = valores[0]
+maior_valor = valores[0]
+
+for i in range(1, quantidade):
+    if valores[i] < menor_valor:
+        menor_valor = valores[i]
+    if valores[i] > maior_valor:
+        maior_valor = valores[i]
+
+# Calcula a média aritmética
+media = soma / quantidade
+
+# Exibe os resultados
+print(f"Menor valor: {menor_valor}")
+print(f"Maior valor: {maior_valor}")
+print(f"Média aritmética: {media:.0f}")
