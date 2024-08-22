@@ -236,3 +236,30 @@ for i in range(len(numeros)):
 
 resultado = "+".join(valores_impares)
 print(f"{resultado} = {soma}")
+
+# 9. Escreva um programa que receba como entrada uma string várias palavras separadas
+# por espaço. O programa deverá verificar e apresentar a quantidade de ocorrência de
+
+# cada palavra no texto repassado como entrada para o programa. Os sinais de pontu-
+# ação não devem ser contabilizados, como por exemplo “.” Ou “,”.
+
+import string
+
+entrada = input("Digite uma sequência de palavras: ")
+
+entrada = entrada.translate(str.maketrans("", "", string.punctuation)).lower()
+
+palavras = entrada.split()
+
+contagem = {}
+
+for palavra in palavras:
+    if palavra in contagem:
+        contagem[palavra] += 1
+    else:
+        contagem[palavra] = 1
+resultado = "; ".join([f"{palavra}={contagem[palavra]}" for palavra in contagem])
+if resultado:
+    print(resultado + ";")
+else:
+    print("Nenhuma palavra foi inserida.")
