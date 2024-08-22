@@ -164,3 +164,24 @@ media = soma / quantidade
 print(f"Menor valor: {menor_valor}")
 print(f"Maior valor: {maior_valor}")
 print(f"Média aritmética: {media:.0f}")
+
+# 6. Crie um programa que solicite ao usuário uma lista de números inteiros e uma string
+# de mesmo comprimento. O programa deve substituir os números nos índices ímpares
+# da lista por caracteres correspondentes da string nos mesmos índices. Exiba a se-
+# quência resultante, separada por um espaço em branco.
+
+numeros = input("Digite a lista de números inteiros (separados por espaço): ").split()
+string = input("Digite uma string de mesmo comprimento: ")
+
+resultado = []
+
+if len(numeros) != len(string):
+    print("A lista de números e a string devem ter o mesmo comprimento.")
+else:
+    for i in range(len(numeros)):
+        if i % 2 == 1:
+            resultado.append(string[i])
+        else:
+            resultado.append(numeros[i])
+
+    print(" ".join(resultado))
