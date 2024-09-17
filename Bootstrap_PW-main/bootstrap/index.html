@@ -9,6 +9,12 @@
     <link rel="icon" href="/Bootstrap_PW-main/bootstrap/147987895-053c724c-eefd-4cc0-ae20-a1502ab0120d.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Bootstrap_PW-main/bootstrap/scroll.css">
+    <style>
+        .custom-card {
+            max-width: 200px; /* Ajuste a largura máxima conforme necessário */
+            margin: auto; /* Centraliza o card */
+        }
+    </style>
     <title>Deltarune</title>
 </head>
 
@@ -31,14 +37,37 @@
             seu ambiente "é o mesmo mundo de Undertale". Um terceiro capítulo está planejado junto aos capítulos 4 e 5,
             mas nenhuma data de lançamento foi anunciada ainda.</p>
 
-
         <section id="personagens" class="mb-5">
             <h2>Personagens</h2>
             <p>Aqui temos 3 personagens de Deltarune</p>
-            <div class="d-flex justify-content-center">
-                <img id="sussi" src="/Bootstrap_PW-main/bootstrap/Susie_battle_idle.webp" alt="Susie" class="img-fluid mx-2" style="max-height: 150px;">
-                <img id="raslei" src="/Bootstrap_PW-main/bootstrap/Ralsei.webp" alt="Ralsei" class="img-fluid mx-2" style="max-height: 150px;">
-                <img id="kris" src="/Bootstrap_PW-main/bootstrap/Kris_Chapter_1_End.webp" alt="Kris" class="img-fluid mx-2" style="max-height: 150px;">
+            <div class="row justify-content-center"> <!-- Adicionada a classe justify-content-center -->
+                <div class="col-md-3"> <!-- Ajuste a largura para col-md-3 -->
+                    <div class="card mb-4 custom-card"> <!-- Adicionada a classe custom-card -->
+                        <img src="/Bootstrap_PW-main/bootstrap/Susie_battle_idle.webp" class="card-img-top" alt="Susie">
+                        <div class="card-body">
+                            <h5 class="card-title">Susie</h5>
+                            <p class="card-text">Susie é uma personagem forte e destemida, conhecida por sua atitude agressiva.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"> <!-- Ajuste a largura para col-md-3 -->
+                    <div class="card mb-4 custom-card"> <!-- Adicionada a classe custom-card -->
+                        <img src="/Bootstrap_PW-main/bootstrap/Ralsei.webp" class="card-img-top" alt="Ralsei">
+                        <div class="card-body">
+                            <h5 class="card-title">Ralsei</h5>
+                            <p class="card-text">Ralsei é um personagem gentil e sábio, sempre pronto para ajudar os amigos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"> <!-- Ajuste a largura para col-md-3 -->
+                    <div class="card mb-4 custom-card"> <!-- Adicionada a classe custom-card -->
+                        <img src="/Bootstrap_PW-main/bootstrap/Kris_Chapter_1_End.webp" class="card-img-top" alt="Kris">
+                        <div class="card-body">
+                            <h5 class="card-title">Kris</h5>
+                            <p class="card-text">Kris é o protagonista do jogo, conhecido por sua determinação e coragem.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -55,7 +84,7 @@
     <footer class="text-center">
         <div id="copyright">
             Desenvolvido por <a href="https://github.com/JhonataOvirowa" target="_blank">@Jhonata</a>
-            <a href="https://github.com/MauricioSts" target="_blank">@Mauricio</a>
+            and <a href="https://github.com/MauricioSts" target="_blank">@Mauricio</a>.
         </div>
     </footer>
 </body>
